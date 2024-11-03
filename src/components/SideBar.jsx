@@ -5,8 +5,13 @@ export const SideBar = ({hamStatus, setHamStatus}) => {
             }`}>
             <div className="flex justify-between p-3">
                 <div className="flex flex-col">
-                    <div>Nishyan</div>
-                    <div className="text-xs underline">Visit Store</div>
+                    <div className="flex">
+                        <img src="../public/image.png" className="rounded-sm w-[35px] h-[35px] flex mt-0.5"/>
+                        <div className="flex flex-col ml-3">
+                            <div className="text-sm">Nishyan</div>
+                            <div className="text-xs underline">Visit Store</div>
+                        </div>
+                    </div>
                 </div>
                 <div className="flex flex-col justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6" onClick={() => setHamStatus(prev => !prev)}>
