@@ -13,12 +13,12 @@ function App() {
     <div className='flex'>
       <SideBar hamStatus={hamStatus} setHamStatus={setHamStatus}/>
       <div className={`duration-300 ease-in-out top-0 right-0 ${
-          hamStatus ? 'w-[100vw]' : 'w-[85vw]'
+          hamStatus ? 'w-[100vw]' : 'w-[70vw] md:w-[85vw]'
         }`}>
         <AppBar hamStatus={hamStatus} setHamStatus={setHamStatus}/>
         <div className='px-6'>
           <div className='font-semibold text-lg pt-5'>Overview</div>
-          <div className='grid grid-cols-3 gap-x-5 pt-5'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 pt-5'>
             <RevenueCard title="Next Payout" amount="2,312.23" orderCount={13} active={true}/>
             <RevenueCard title="Amount Pending" amount="92,312.20" orderCount={13}/>
             <RevenueCard title="Amount Processed" amount="23,92,312.19"/>

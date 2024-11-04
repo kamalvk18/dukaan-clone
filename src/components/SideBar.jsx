@@ -1,7 +1,7 @@
 export const SideBar = ({hamStatus, setHamStatus}) => {
     return (
         <div className = {`flex flex-col text-white bg-dukaan-side-bar-blue top-0 left-0 duration-300 ease-in-out ${
-                hamStatus ? 'w-[0vw]' : 'w-[15vw]'
+                hamStatus ? 'w-[0vw]' : 'w-[30vw] md:w-[15vw]'
             }`}>
             <div className="flex justify-between p-3">
                 <div className="flex flex-col">

@@ -2,11 +2,13 @@ import { SearchBar } from "./SearchBar"
 
 export const AppBar = ({hamStatus, setHamStatus}) => {
     return (
-        <div className="flex justify-between py-2 px-6 border-b items-center">
+        <div className="flex flex-col md:flex-row justify-between py-2 px-6 border-b items-center">
             { hamStatus ? (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-2" onClick={() => setHamStatus(prev => !prev)}>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
+                <div className="flex max-md:min-w-full items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-2" onClick={() => setHamStatus(prev => !prev)}>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>
             ): null}
             <div className="flex gap-3">
                 <div className="text-lg font-bold">Payouts</div>
@@ -17,7 +19,7 @@ export const AppBar = ({hamStatus, setHamStatus}) => {
                     <div className="text-sm pl-0.5">How is works</div>
                 </div>
             </div>
-            <div className="mx-auto w-[380px]" >
+            <div className="mx-auto w-full md:w-[380px] my-2 md:my-0" >
                 < SearchBar placeholder={"Search features, tutorials, etc."} backgroundColor={"bg-gray-100"}/>
             </div>
             <div className="flex gap-4">
